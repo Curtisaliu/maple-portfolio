@@ -17,7 +17,9 @@ export default function NavBar() {
   return(
     <nav className="flex flex-wrap gap-3">
       {navItems.map((item) => {
-        const isActive = pathname === item.href;
+        // trailingSlash: true makes pathname "/about/", so compare without it
+        const isActive =
+          pathname.replace(/\/$/, "") === item.href.replace(/\/$/, "");
 
         return(
           <Link
