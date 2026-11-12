@@ -1,7 +1,62 @@
 import type {
+  CertificationCategory,
   SkillCategory,
   ProjectCategory,
 } from "@/types/portfolio";
+
+export const certificationCategories: CertificationCategory[] = [
+  {
+    name: "AWS",
+    certifications: [
+      {
+        name: "AWS Certified Cloud Practitioner",
+        issuer: "Amazon Web Services",
+      },
+      {
+        name: "AWS Certified Solutions Architect – Associate",
+        issuer: "Amazon Web Services",
+      },
+    ],
+  },
+  {
+    name: "Genesys",
+    certifications: [
+      {
+        name: "Genesys Cloud CX Professional",
+        issuer: "Genesys",
+      },
+      {
+        name: "Genesys Cloud CX Developer",
+        issuer: "Genesys",
+      },
+      {
+        name: "Genesys Cloud CX Architect",
+        issuer: "Genesys",
+      },
+    ],
+  },
+  {
+    name: "Other Certifications",
+    certifications: [
+      {
+        name: "Cognigy.AI Foundational",
+        issuer: "Cognigy",
+      },
+      {
+        name: "Cognigy.AI Developer",
+        issuer: "Cognigy",
+      },
+      {
+        name: "Cognigy.AI AI Agents",
+        issuer: "Cognigy",
+      },
+      {
+        name: "Cognigy.AI Conversational Design",
+        issuer: "Cognigy",
+      },
+    ],
+  },
+];
 
 export const skillCategories: SkillCategory[] = [
   {
