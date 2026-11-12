@@ -61,6 +61,20 @@ The site is live at [curtisaliu.dev](https://curtisaliu.dev).
 - Amazon CloudFront serves the site over HTTPS as the CDN
 - The domain is registered with Porkbun, which also manages DNS
 
+To deploy, create a git-ignored `.env.deploy` file:
+
+```text
+DEPLOY_BUCKET=your-bucket-name
+DEPLOY_DISTRIBUTION_ID=your-distribution-id
+```
+
+Then, from an up-to-date `main` branch with the AWS CLI signed in:
+
+```bash
+npm run deploy -- --dry-run   # preview uploads and deletions
+npm run deploy                # build, upload to S3, and invalidate CloudFront
+```
+
 ## Project Structure
 
 ```text
